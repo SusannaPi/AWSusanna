@@ -9,9 +9,22 @@ package com.mycompany.mavenproject1;
  *
  * @author Susanna
  */
+import java.util.Scanner;
+        
+
 public class numbergame {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+        Scanner scanner = new Scanner(System.in);
+        
+    
+        while (true) {
+            int secret=(int)(Math.random()*100+1);
+            //System.out.println("secret");
+            System.out.println("Guess secret number between 0-100: ");
+            int guess = Integer.valueOf(scanner.nextLine());
+            //jatkuu
+        }
+        
+    }    
 }
