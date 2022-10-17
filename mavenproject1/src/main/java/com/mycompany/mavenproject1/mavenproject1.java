@@ -33,11 +33,11 @@ public class Mavenproject1 {
             }
             
             if (guess < secret) {
-                System.out.println("You guess was too small.");
+                System.out.println("Your guess was too small.");
             }
             
             if (guess > secret) {
-                System.out.println("You guess was too big.");
+                System.out.println("Your guess was too big.");
             }
             
         }
