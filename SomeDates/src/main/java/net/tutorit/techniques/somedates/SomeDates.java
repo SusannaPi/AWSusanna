@@ -23,7 +23,11 @@ public class SomeDates {
         datesAndTimes.timeAndDateNow();
         System.out.println("");
         
-        datesAndTimes.dateXDaysFromNow(90);
+        datesAndTimes.durationAndDate();
+        
+        datesAndTimes.whenIsChristmas();
+        
+        datesAndTimes.whenIsFriday13();
         
         
         

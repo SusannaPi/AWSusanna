@@ -51,7 +51,8 @@ public class CollectionsTest {
             
             System.out.println("");
             
-            persons1.stream().sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
+            persons1.stream()
+                    .sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
                     .forEach(System.out::println);
             
             System.out.println("");
@@ -62,11 +63,13 @@ public class CollectionsTest {
             
             System.out.println("");
             
-            persons1.stream().filter(p -> p.getAge() > 18).forEach(System.out::println);
+            persons1.stream().filter(p -> p.getAge() > 18)
+                    .forEach(System.out::println);
             System.out.println("");
             
             persons1.stream().filter(p -> p.getAge() > 18)
-                    .sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
+                    .sorted((p1,p2)-> p1.getName()
+                    .compareTo(p2.getName()))
                     .forEach(System.out::println);
     }
     
