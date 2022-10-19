@@ -18,7 +18,21 @@ public class Techniques {
         System.out.println("Hello World!");
         
         CollectionsTest.weekdays();
+        CollectionsTest.mapTests();
+        CollectionsTest.personArrayTest();
         
         
+        
+        
+        /*class create finances(Worker w) method (meaning the class that contains
+        the main method)
+        • Calls w.pay (
+        • And in the main
+        • create Person and Company objects
+        • Pass them to finances method*/
+        
+        /*static void finances(Worker w, double salary) {
+            
+        }*/
     }
 }

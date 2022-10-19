@@ -10,11 +10,21 @@ import java.util.Objects;
  *
  * @author Susanna
  */
-public class Person implements Worker {
-    private String name;
+public class Person implements Worker, Comparable<Person> {
+    private String name = "Henna";
+    private int age = 11;
+    
+    public Person() {
+        
+    }
     
     public Person(String name) {
         this.name = name;
+    }
+    
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     @Override
@@ -52,6 +62,18 @@ public class Person implements Worker {
         return Objects.equals(this.name, other.name);
     } 
  
+    @Override
+    public int compareTo(Person person) {
+        return this.name.compareTo(person.getName());
+        
+    } 
+
+    @Override
+    public String toString() {
+        return name + " on " + age + " vuotias";
+    }
+    
+    
     
     
 }

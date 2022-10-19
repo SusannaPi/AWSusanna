@@ -4,7 +4,12 @@
  */
 package net.tutorit.techniques.techniques.collections;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TreeSet;
 import net.tutorit.techniques.techniques.interfaces.Person;
 
@@ -13,6 +18,28 @@ import net.tutorit.techniques.techniques.interfaces.Person;
  * @author Susanna
  */
 public class CollectionsTest {
+    
+    static ArrayList<Person> persons1 = new ArrayList<>();
+    
+    static{
+        persons1.add(new Person());
+        persons1.add(new Person("Anne", 58));
+        persons1.add(new Person("Helena", 2));
+        persons1.add(new Person("Aimo", 77));
+        persons1.add(new Person("Heikki", 12));
+    
+    }
+    public static void showPersons() {
+        for(Person p : persons1) {
+            System.out.println(p);
+        }
+    }
+    
+    
+    public static void personArrayTest() {
+            showPersons();
+    }
+    
     public static void weekdays() {
         HashSet<String> weekdays = new HashSet<>();
         weekdays.add("Monday");
@@ -61,13 +88,68 @@ public class CollectionsTest {
         System.out.println("");
         
         
-        HashSet<Person> persons = new HashSet<Person>();
+        Set<Person> persons2 = new TreeSet<Person>();
         Person hanna = new Person("Hanna");
-        persons.add(hanna);
-        persons.add(new Person("Hanna"));
-        for (Person p : persons) {
+        persons2.add(hanna);
+        //Trying to add Hanna again, but it is not working becaude class Person has 
+        //equals + hashcode methods without those you have two Hanna in HashSet persons
+        
+        //persons.add(new Person("Hanna"));
+        persons2.add(new Person("Aapo"));
+        persons2.add(new Person("Kaisa"));
+        persons2.add(new Person("Yvonne"));
+        persons2.add(new Person("Tuomas"));
+        
+        for (Person p : persons2) {
             System.out.println(p.getName());
         }
+         System.out.println("");  
+    }   
+    
+    
+    public static void mapTests() {
+        System.out.println("Testing maps");
+        HashMap<String, Person> codes = new HashMap<>();
+        
+        Person kaisu = new Person("Kaisu");
+        String sotu = "090909-xxxx";
+        
+        codes.put(sotu, kaisu);
+        codes.put("070707-3333", new Person("Markku"));
+        codes.put("010101-1234", new Person("Maiju"));
+        
+        System.out.println("Going through keys and printing values");
+        for (String s : codes.keySet()) {
+            System.out.println(s + " ==> " + codes.get(s).getName());
+        }
+        System.out.println("");
+        System.out.println("Going through values");
+        for (Person p : codes.values()) {
+            System.out.println(p.getName());
+        }
+        System.out.println("");
+        
+        System.out.println("Finding keys and values");
+        for(Entry<String, Person> pe : codes.entrySet()) {
+            System.out.println(pe.getKey() + " ==> " + pe.getValue().getName());
+        }
+        System.out.println("");
+        
+        System.out.println("Who's social security number is 090909-xxxx?");
+        System.out.println(codes.get("090909-xxxx").getName());
+        System.out.println("");
+          
+        
+        //Map<Integer, Integer> im = new Map<>();
         
     }
+    
+    
+    
+        
+    
+    
+    
+    
+    
 }
