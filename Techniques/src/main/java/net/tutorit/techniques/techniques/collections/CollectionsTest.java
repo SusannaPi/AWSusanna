@@ -5,6 +5,7 @@
 package net.tutorit.techniques.techniques.collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -27,17 +28,46 @@ public class CollectionsTest {
         persons1.add(new Person("Helena", 2));
         persons1.add(new Person("Aimo", 77));
         persons1.add(new Person("Heikki", 12));
-    
+        
+        
     }
     public static void showPersons() {
         for(Person p : persons1) {
             System.out.println(p);
-        }
+        }  
     }
     
     
     public static void personArrayTest() {
             showPersons();
+            System.out.println(persons1);
+            /*System.out.println("... alphabetical order " );
+            persons1.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
+            System.out.println(persons1);
+            
+            System.out.println("...sorted by age...");
+            persons1.sort((person1, person2) -> person1.getAge()-(person2.getAge()));
+            System.out.println(persons1);*/
+            
+            System.out.println("");
+            
+            persons1.stream().sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
+                    .forEach(System.out::println);
+            
+            System.out.println("");
+            
+            
+            persons1.stream().sorted((p1,p2) -> (p1.getAge()-p2.getAge()))
+                    .forEach(System.out::println);
+            
+            System.out.println("");
+            
+            persons1.stream().filter(p -> p.getAge() > 18).forEach(System.out::println);
+            System.out.println("");
+            
+            persons1.stream().filter(p -> p.getAge() > 18)
+                    .sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
+                    .forEach(System.out::println);
     }
     
     public static void weekdays() {
@@ -103,7 +133,7 @@ public class CollectionsTest {
         for (Person p : persons2) {
             System.out.println(p.getName());
         }
-         System.out.println("");  
+        System.out.println("");  
     }   
     
     
@@ -139,8 +169,19 @@ public class CollectionsTest {
         System.out.println(codes.get("090909-xxxx").getName());
         System.out.println("");
           
+        System.out.println("Arvotaan lottonumeroita 1000 kpl HashMapiin");
+        Map<Integer, Integer> im = new HashMap<>();
+        for(int i = 0; i < 1000; i++) {
+            int random = (int)(Math.random()*37+1);
+            int prev = im.getOrDefault(random, 0);
+            im.put(random, prev+1);
+        }
         
-        //Map<Integer, Integer> im = new Map<>();
+        System.out.println("How many times you can find the same number?");
+        for(int i : im.keySet()) {
+            System.out.println("Number " + i + " you can find " + im.get(i) + " times");
+        }
+        System.out.println("");
         
     }
     

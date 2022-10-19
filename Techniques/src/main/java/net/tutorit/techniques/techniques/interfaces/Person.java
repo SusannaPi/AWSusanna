@@ -40,6 +40,11 @@ public class Person implements Worker, Comparable<Person> {
         this.name = name;
     }
 
+    public int getAge() {
+        return age;
+    }
+    
+    
     @Override
     public int hashCode() {
         int hash = 7;

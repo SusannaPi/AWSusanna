@@ -13,26 +13,33 @@ import net.tutorit.techniques.techniques.collections.CollectionsTest;
  * @author Susanna
  */
 public class Techniques {
-
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-        
-        CollectionsTest.weekdays();
-        CollectionsTest.mapTests();
-        CollectionsTest.personArrayTest();
-        
-        
-        
-        
-        /*class create finances(Worker w) method (meaning the class that contains
+    
+    /*class create finances(Worker w) method (meaning the class that contains
         the main method)
         • Calls w.pay (
         • And in the main
         • create Person and Company objects
         • Pass them to finances method*/
         
-        /*static void finances(Worker w, double salary) {
-            
-        }*/
+    static void finances(Worker w, double salary) {
+        w.pay(salary);
+    }
+
+    public static void main(String[] args) {
+        //System.out.println("Hello World!");
+        //System.out.println("");
+        
+        //finances(a -> System.out.println("Pimeää työtä " + a), 8000);
+        //System.out.println("");
+        
+        //CollectionsTest.weekdays();
+        //CollectionsTest.mapTests();
+        CollectionsTest.personArrayTest();
+        
+        
+        
+        
+        
+        
     }
 }
