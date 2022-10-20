@@ -5,8 +5,14 @@
 
 package net.tutorit.cpharjoitus1;
 
+import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
+import java.util.Calendar;
+import java.util.Scanner;
 
 /**
  *
@@ -61,19 +67,37 @@ public class CPHarjoitus1 {
     }
     */
     static String justDate(LocalDateTime dt){
-        return "";
+        dt = LocalDateTime.now();
+        DateTimeFormatter formatHelper = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        String justDate = dt.format(formatHelper);
+        
+        return justDate;
     }
     
     static boolean isDateAfter(LocalDateTime dt,int year,int month, int day){
+        LocalDateTime now = LocalDateTime.now();
+        if (dt.isAfter(now)) {
+            return true;
+        }
+            
+        
         return false;
     }
     
     static LocalDateTime nextWednesdayAtNine(){
-        return null;
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime nextWednesday = now.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY));
+        nextWednesday = nextWednesday.withHour(9).withMinute(0);
+        
+        
+        return nextWednesday;
     }
     
     static LocalDate askForDate(){
         // Lue käyttäjän syöte (suomalaisittain) "20.10.2022" ja palauta se LocalDate:na
+        System.out.println("Give me the date in form: '01.01.2020'");
+        
+        
         return null;
     }
     
@@ -81,7 +105,7 @@ public class CPHarjoitus1 {
         LocalDate dt=askForDate();
         System.out.println("Käyttäjä antoi päivämäärän: "+dt);
         System.out.println("Seuraava keskiviikko kello 9.00: "+nextWednesdayAtNine());
-        System.out.println("On 20.10.2020 jälkeen: "+isDateAfter(nextWednesdayAtNine(),2020,10,20));
+        System.out.println("On 19.10.2020 jälkeen: "+isDateAfter(nextWednesdayAtNine(),2020,10,20));
         System.out.println("On 1.6.2023 jälkeen: "+isDateAfter(nextWednesdayAtNine(),2023,6,1));
         System.out.println("Pelkkä päivämäärä: "+justDate(nextWednesdayAtNine()));
         // Myös seuraavat pitäisi saada pois kommenteista....
