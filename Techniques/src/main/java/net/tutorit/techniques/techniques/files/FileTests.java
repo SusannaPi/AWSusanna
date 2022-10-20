@@ -18,11 +18,13 @@ import java.util.logging.Logger;
  */
 public class FileTests {
     
-    static public void createFiles() {
+    public static void createFiles() {
         // How to create a text files I/O
         
         try(PrintWriter writer = new PrintWriter("C:\\javatraining\\AWSusanna\\test.txt")) {
             writer.println("Tässä harjoitellaan");
+            
+            writer.close();
         }
         catch(Exception ex) {
             System.out.println("Tiedoston kirjoittaminen epäonnistui");

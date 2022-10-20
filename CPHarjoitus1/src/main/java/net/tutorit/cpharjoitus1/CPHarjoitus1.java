@@ -14,6 +14,7 @@ import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -33,28 +34,31 @@ public class CPHarjoitus1 {
         
     static void companyTester(){
         Company c=new Company("Testers United");
-        /*c.addEmployee("Tuomas",LocalDate.of(2000,5,1));
+        c.addEmployee("Tuomas",LocalDate.of(2000,5,1));
         System.out.println(c.getEmployeeInfo("Tuomas"));
         // Pitäisi tulostua: Tuomas aloitti 1.5.2000, työsuhde jatkuu vielä
         c.addEmployee("Simeoni",LocalDate.of(2010, 9, 2),LocalDate.of(2015,2,3));
         System.out.println(c.getEmployeeInfo("Simeoni"));
         // Pitäisi tulostua: Simeoni aloitti 2.9.2010 ja lopetti 3.2.2015
-        c.addEmployee("Aapo",LocalDate.of(2014,5));
+        System.out.println("");
+        c.addEmployee("Aapo",LocalDate.of(2014,5,23));
         // addEmployee:lle siis parametrinä nimi sekä työsuhteen alkupäivä sekä mahdollisesti lopetuspäivä
         List<Person> all=c.getAll();
         // Tulosta kaikki työntekijät (myös ne joiden työsuhde ei enää jatku) nimen mukaisessa aakkosjärjestyksessä
         for(Person p: all){
             System.out.println(c.getEmployeeInfo(p.getName()));
         }
+        System.out.println("");
         List<Person> still=c.getStillEmployed();
         // Tulosta voimassa olevat työsuhteet alkamispäivän mukaisessa järjestyksessä
         for(Person p:still){
             System.out.println(c.getEmployeeInfo(p.getName()));
         }
         // Kaikki työntekijät tiedostoon
-        c.exportEmployees("employees.txt");
+        c.exportEmployees("employees.txt"); 
+        
     }
-    */
+    
         
     /*
     Laajenna koodia siten, että saat alla olevat kaksi metodia toimimaan
@@ -70,7 +74,7 @@ public class CPHarjoitus1 {
     }
     */
     
-    }
+    
     
     static String justDate(LocalDateTime dt){
         dt = LocalDateTime.now();
@@ -111,17 +115,18 @@ public class CPHarjoitus1 {
         LocalDate datel = LocalDate.parse(date, formatHelper);
         
         return datel;
-    }
+    } 
     
     public static void main(String[] args) {
-        LocalDate dt=askForDate();
-        System.out.println("Käyttäjä antoi päivämäärän: "+dt);
+        //LocalDate dt=askForDate();
+        //System.out.println("Käyttäjä antoi päivämäärän: "+dt);
         System.out.println("Seuraava keskiviikko kello 9.00: "+nextWednesdayAtNine());
         System.out.println("On 19.10.2020 jälkeen: "+isDateAfter(nextWednesdayAtNine(),2020,10,20));
         System.out.println("On 1.6.2023 jälkeen: "+isDateAfter(nextWednesdayAtNine(),2023,6,1));
         System.out.println("Pelkkä päivämäärä: "+justDate(nextWednesdayAtNine()));
         // Myös seuraavat pitäisi saada pois kommenteista....
         //veterinarianTester();
-        //companyTester();
+        companyTester();     
     }
+    
 }
