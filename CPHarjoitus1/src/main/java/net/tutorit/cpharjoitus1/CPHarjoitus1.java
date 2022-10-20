@@ -80,15 +80,17 @@ public class CPHarjoitus1 {
             return true;
         }
             
-        
         return false;
     }
     
     static LocalDateTime nextWednesdayAtNine(){
         LocalDateTime now = LocalDateTime.now();
+        
         LocalDateTime nextWednesday = now.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY));
         nextWednesday = nextWednesday.withHour(9).withMinute(0);
         
+        DateTimeFormatter formatHelper = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+        String formattednextWednesday = nextWednesday.format(formatHelper);
         
         return nextWednesday;
     }
