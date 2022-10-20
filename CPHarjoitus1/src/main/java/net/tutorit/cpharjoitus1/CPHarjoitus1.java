@@ -8,10 +8,13 @@ package net.tutorit.cpharjoitus1;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -75,8 +78,9 @@ public class CPHarjoitus1 {
     }
     
     static boolean isDateAfter(LocalDateTime dt,int year,int month, int day){
-        LocalDateTime now = LocalDateTime.now();
-        if (dt.isAfter(now)) {
+        LocalDate dtTest = LocalDate.of(year, month, day);
+        LocalDate orig = dt.toLocalDate();
+        if (dtTest.isAfter(orig)) {
             return true;
         }
             
@@ -87,20 +91,23 @@ public class CPHarjoitus1 {
         LocalDateTime now = LocalDateTime.now();
         
         LocalDateTime nextWednesday = now.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY));
-        nextWednesday = nextWednesday.withHour(9).withMinute(0);
-        
-        DateTimeFormatter formatHelper = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
-        String formattednextWednesday = nextWednesday.format(formatHelper);
+        nextWednesday = nextWednesday.withHour(9).withMinute(0).withSecond(0).withNano(0);
         
         return nextWednesday;
     }
     
     static LocalDate askForDate(){
         // Lue käyttäjän syöte (suomalaisittain) "20.10.2022" ja palauta se LocalDate:na
-        System.out.println("Give me the date in form: '01.01.2020'");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give me the date in the form: '01.01.2020'");
+        String date = scanner.nextLine();
         
+        DateTimeFormatter formatHelper = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)
+                                                          .withLocale(new Locale("fi"));
         
-        return null;
+        LocalDate datel = LocalDate.parse(date, formatHelper);
+        
+        return datel;
     }
     
     public static void main(String[] args) {
