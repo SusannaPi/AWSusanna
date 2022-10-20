@@ -7,6 +7,7 @@ package net.tutorit.techniques.techniques;
 
 import net.tutorit.techniques.techniques.interfaces.Worker;
 import net.tutorit.techniques.techniques.collections.CollectionsTest;
+import net.tutorit.techniques.techniques.files.FileTests;
 
 /**
  *
@@ -34,7 +35,9 @@ public class Techniques {
         
         //CollectionsTest.weekdays();
         //CollectionsTest.mapTests();
-        CollectionsTest.personArrayTest();
+        //CollectionsTest.personArrayTest();
+        
+        FileTests.createFiles();
         
         
         
