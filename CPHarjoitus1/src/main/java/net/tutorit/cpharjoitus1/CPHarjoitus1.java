@@ -30,10 +30,10 @@ public class CPHarjoitus1 {
         Seuraavakin funktio pitäisi saada toimimaan.
         Joudut siis tekemään vielä pari luokkaa
     */
-    /*    
+        
     static void companyTester(){
         Company c=new Company("Testers United");
-        c.addEmployee("Tuomas",LocalDate.of(2000,5,1));
+        /*c.addEmployee("Tuomas",LocalDate.of(2000,5,1));
         System.out.println(c.getEmployeeInfo("Tuomas"));
         // Pitäisi tulostua: Tuomas aloitti 1.5.2000, työsuhde jatkuu vielä
         c.addEmployee("Simeoni",LocalDate.of(2010, 9, 2),LocalDate.of(2015,2,3));
@@ -69,6 +69,9 @@ public class CPHarjoitus1 {
         Cat c=new Cat("Misu");
     }
     */
+    
+    }
+    
     static String justDate(LocalDateTime dt){
         dt = LocalDateTime.now();
         DateTimeFormatter formatHelper = DateTimeFormatter.ofPattern("dd.MM.yyyy");

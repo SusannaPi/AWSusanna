@@ -4,10 +4,23 @@
  */
 package net.tutorit.cpharjoitus1;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jyrki
  */
 public class Company {
+    private ArrayList<Person> employees = new ArrayList<Person>(); 
+    private String name; 
+    
+    public Company(String name) {
+        this.name = name;
+    }
+    
+    
+    
+    
+    
     
 }
