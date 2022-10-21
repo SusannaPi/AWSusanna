@@ -7,6 +7,8 @@ package net.tutorit.checkpoint1;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 /* ARVIOINTIPERUSTEET
 Läpipääsyyn: (=1pt)
@@ -99,7 +101,10 @@ public class Checkpoint1 {
             Palauta LocalDate-objekti, joka kuvaa samaa päivämäärää.
             Aikavyöhykkeitä ei tarvitse miettiä.
         */
-        return null;        
+        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+        LocalDate date = LocalDate.parse(dateString, formatter);
+        
+        return date;        
     }
     
     public static void main(String[] args) {
