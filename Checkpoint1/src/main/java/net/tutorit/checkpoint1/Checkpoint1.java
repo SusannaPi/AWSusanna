@@ -5,10 +5,14 @@
 
 package net.tutorit.checkpoint1;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import static java.time.temporal.TemporalAdjusters.firstInMonth;
+import java.util.Calendar;
+import java.util.Locale;
 
 /* ARVIOINTIPERUSTEET
 Läpipääsyyn: (=1pt)
@@ -90,8 +94,12 @@ public class Checkpoint1 {
     }
     
     static LocalDate firstMondayOfNextMonth(){
-        // Palauta seuraavan kuukauden ensimmäisen maanantain päivämäärä.
-        return null;
+        //Palauta seuraavan kuukauden ensimmäisen maanantain päivämäärä.
+        LocalDate now = LocalDate.now();
+        LocalDate afterMonth = now.plusMonths(1);
+        LocalDate firstMonday = afterMonth.with(firstInMonth(DayOfWeek.MONDAY));
+        
+        return firstMonday;
     }
     
     static LocalDate greetingsFromNY(){
@@ -101,7 +109,7 @@ public class Checkpoint1 {
             Palauta LocalDate-objekti, joka kuvaa samaa päivämäärää.
             Aikavyöhykkeitä ei tarvitse miettiä.
         */
-        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yy");
         LocalDate date = LocalDate.parse(dateString, formatter);
         
         return date;        
