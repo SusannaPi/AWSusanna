@@ -20,7 +20,7 @@ public class Transactions {
         this.amount = amount;
         this.date = date;
     
-        try(PrintWriter writer = new PrintWriter("C:\\javatraining\\AWSusanna\\Checpoint1\\test.txt")) {
+        try(PrintWriter writer = new PrintWriter("C:\\javatraining\\AWSusanna\\Checpoint1\\tapahtumat.txt")) {
             writer.println();
             
             writer.close();
