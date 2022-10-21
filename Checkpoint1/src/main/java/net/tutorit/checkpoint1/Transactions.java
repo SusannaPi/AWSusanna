@@ -4,6 +4,7 @@
  */
 package net.tutorit.checkpoint1;
 
+import java.io.PrintWriter;
 import java.time.LocalDate;
 
 /**
@@ -16,14 +17,30 @@ public class Transactions {
     
     
     public Transactions(double amount, LocalDate date) {
-    this.amount = amount;
-    this.date = date;
+        this.amount = amount;
+        this.date = date;
+    
+        try(PrintWriter writer = new PrintWriter("C:\\javatraining\\AWSusanna\\Checpoint1\\test.txt")) {
+            //writer.println(double amount, LocalDate date);
+            
+            writer.close();
+        }
+        catch(Exception ex) {
+            System.out.println("Tiedoston kirjoittaminen epäonnistui");
+        }
+    
     }
 
     @Override
     public String toString() {
         return amount + " " + date;
     }
+    
+    public static void export() {
+        
+      
+    }
+    
     
     
 }
