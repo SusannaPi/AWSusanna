@@ -21,7 +21,7 @@ public class Transactions {
         this.date = date;
     
         try(PrintWriter writer = new PrintWriter("C:\\javatraining\\AWSusanna\\Checpoint1\\test.txt")) {
-            //writer.println(double amount, LocalDate date);
+            writer.println();
             
             writer.close();
         }
