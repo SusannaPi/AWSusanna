@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import static java.time.temporal.TemporalAdjusters.firstInMonth;
-import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 /* ARVIOINTIPERUSTEET
@@ -43,7 +43,7 @@ public class Checkpoint1 {
         Joudut siis tekemään vielä pari luokkaa
     */
     static void bankingTester(){
-    /*    
+        
         // Pankkitili: Tilinomistaja ja alkusaldo
         Account acc=new Account("Tiina Tilinolmistaja",5250);
         // Tehdään uusia tapahtumia tilille
@@ -54,22 +54,22 @@ public class Checkpoint1 {
         acc.transaction(-15.90,LocalDate.of(2022, 3, 1));
         acc.transaction(-232.21,LocalDate.of(2022, 3, 7));
         // Haetaan helmikuun tapahtumat
-        List<Transaction> transactions=acc.getTransactionsOf(2022,2);
+        //List<Transaction> transactions=acc.getTransactionsOf(2022,2);
         // Jos ylläoleva tuntuu mahdottomalta, niin tyydyttävästi kelpaa myös
-        // List<Transaction> transactions=acc.getAll();
-        System.out.println("Helmikuun 2022 tapahtumat");
-        for(Transaction t:transactions){
-           System.out.println(t.getDate().toString()+", "+t.getAmount());
+        acc.getAll();
+        //System.out.println("Helmikuun 2022 tapahtumat");
+        //for(Transaction t:transactions){
+        //   System.out.println(t.getDate().toString()+", "+t.getAmount());
            // Yllä oleva riittää. Lisäpistemahdollisuus jos tuloste tulee fiksusti toteutettuna
            // Muodossa "Otto 20.2.2022, -14.11"
            // Kutsumalla System.out.println(t.getDescription());
-        }
+        //}
         // Viedään tilitapahtumat tiedostoon
         // Tiedoston alkuun tilinomistaja sekä alkusaldo
         // Lisäpisteitä loppusaldon esittämisestä
         // Tilitapahtumat omille riveilleen halutulla tapaa muotoiltuna
-        acc.export("tapahtumat.txt");
-    */
+        //acc.export("tapahtumat.txt");
+    
     }
     
     /*

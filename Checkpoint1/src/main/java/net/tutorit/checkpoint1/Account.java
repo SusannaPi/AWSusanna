@@ -12,20 +12,26 @@ import java.util.List;
  *
  * @author Susanna
  */
-public class BankAccount {
+public class Account {
     private String owner = "Hanna";
-    private int saldo = 0;
+    private double saldo = 0;
     private List<Transactions> transactions = new ArrayList<>();
     
-    public BankAccount(String owner, int saldo) {
+    
+    public Account(String owner, int saldo) {
         this.owner = owner;
         this.saldo = saldo;
     }
     
-    public void transaction(int amount, LocalDate dt) {
+    public void transaction(double amount, LocalDate dt) {
         this.saldo += amount;
-        transactions.add(amount, dt);
-        
+        transactions.add(new Transactions(amount, dt));    
+    }
+    
+    public void getAll() {
+        for (Transactions tr : transactions) {
+            System.out.println(tr);
+        }
     }
     
 }
