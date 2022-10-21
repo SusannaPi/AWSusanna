@@ -90,6 +90,9 @@ public class Checkpoint1 {
     }
     static boolean isWorkingHours(LocalDateTime dt){
         // Palauta onko annettu päiväys työaikaa (Ma-Pe, 9:00-17:00)
+        
+        
+        
         return false;
     }
     
