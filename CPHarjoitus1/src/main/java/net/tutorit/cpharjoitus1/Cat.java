@@ -2,19 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package net.tutorit.techniques.techniques.interfaces;
+package net.tutorit.cpharjoitus1;
 
 /**
  *
  * @author Susanna
  */
-public class Company implements Worker {
-    private String name = "JAVA-koodarit";
+public class Cat implements Pet{
+    private String name = "Milla";
     
-
-    @Override
-    public void pay(double amount) {
-        System.out.println(name + " invoices " + amount + "EUR + VAT " + amount*0.24 + "EUR");
+    
+    public Cat(String name) {
+        this.name = name;
     }
 
     public String getName() {
@@ -24,5 +23,9 @@ public class Company implements Worker {
     public void setName(String name) {
         this.name = name;
     }
-    
+
+    @Override
+    public String getBasicInfo() {
+        return "Norjalainen metsäkissa " + name;
+    }
 }

@@ -63,21 +63,22 @@ public class CPHarjoitus1 {
     /*
     Laajenna koodia siten, että saat alla olevat kaksi metodia toimimaan
     */
-    /*
+    
     static void veterinarianTreats(Pet p){
         System.out.println("Sairaskertomus: "+p.getBasicInfo()); // Sekarotuinen (Hurtta) tai Norjalainen metsäkissa (Misu)
     }
     
+    
     static void veterinarianTester(){
         Dog d=new Dog("Hurtta");
         Cat c=new Cat("Misu");
+        veterinarianTreats(d);
+        veterinarianTreats(c);
     }
-    */
-    
     
     
     static String justDate(LocalDateTime dt){
-        dt = LocalDateTime.now();
+        
         DateTimeFormatter formatHelper = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         String justDate = dt.format(formatHelper);
         
@@ -118,14 +119,14 @@ public class CPHarjoitus1 {
     } 
     
     public static void main(String[] args) {
-        //LocalDate dt=askForDate();
-        //System.out.println("Käyttäjä antoi päivämäärän: "+dt);
+        LocalDate dt=askForDate();
+        System.out.println("Käyttäjä antoi päivämäärän: "+dt);
         System.out.println("Seuraava keskiviikko kello 9.00: "+nextWednesdayAtNine());
         System.out.println("On 19.10.2020 jälkeen: "+isDateAfter(nextWednesdayAtNine(),2020,10,20));
         System.out.println("On 1.6.2023 jälkeen: "+isDateAfter(nextWednesdayAtNine(),2023,6,1));
         System.out.println("Pelkkä päivämäärä: "+justDate(nextWednesdayAtNine()));
         // Myös seuraavat pitäisi saada pois kommenteista....
-        //veterinarianTester();
+        veterinarianTester();
         companyTester();     
     }
     

@@ -8,6 +8,7 @@ package net.tutorit.techniques.techniques;
 import net.tutorit.techniques.techniques.interfaces.Worker;
 import net.tutorit.techniques.techniques.collections.CollectionsTest;
 import net.tutorit.techniques.techniques.files.FileTests;
+import net.tutorit.techniques.techniques.dates.DateTests;
 
 /**
  *
@@ -30,17 +31,19 @@ public class Techniques {
         //System.out.println("Hello World!");
         //System.out.println("");
         
-        //finances(a -> System.out.println("Pimeää työtä " + a), 8000);
+        finances(a -> System.out.println("Pimeää työtä " + a), 8000);
         //System.out.println("");
         
         //CollectionsTest.weekdays();
         //CollectionsTest.mapTests();
         //CollectionsTest.personArrayTest();
         
-        FileTests.createFiles();
+        //FileTests.createFiles();
         
         
-        
+        //DateTests.showCurrent();
+        //DateTests.someCalculations();
+        //DateTests.howManyDays();
         
         
         

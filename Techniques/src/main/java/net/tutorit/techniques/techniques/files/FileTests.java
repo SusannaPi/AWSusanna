@@ -26,7 +26,7 @@ public class FileTests {
             
             writer.close();
         }
-        catch(Exception ex) {
+        catch(IOException ex) {
             System.out.println("Tiedoston kirjoittaminen epäonnistui");
         }
         

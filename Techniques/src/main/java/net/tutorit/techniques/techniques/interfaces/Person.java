@@ -27,11 +27,6 @@ public class Person implements Worker, Comparable<Person> {
         this.age = age;
     }
 
-    @Override
-    public void pay(double amount) {
-        System.out.println("[" + name + "]" + " is payed [" + amount + "] EUR and [" + amount*0.25 + "] as social security");
-    }
-
     public String getName() {
         return name;
     }
@@ -44,6 +39,15 @@ public class Person implements Worker, Comparable<Person> {
         return age;
     }
     
+    public void setAge(int age) {
+        this.age = age;
+    }
+    
+    
+    @Override
+    public void pay(double amount) {
+        System.out.println(name + " is payed " + amount + " EUR and " + amount*0.25 + " as social security fees");
+    }
     
     @Override
     public int hashCode() {
@@ -76,10 +80,7 @@ public class Person implements Worker, Comparable<Person> {
     @Override
     public String toString() {
         return name + " on " + age + " vuotias";
-    }
-    
-    
-    
+    }   
     
 }
 

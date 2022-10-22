@@ -1,0 +1,9 @@
+Tiina Tilinolmistaja
+5250.0
+deposit 2022-02-18 -214.23
+deposit 2022-02-20 -14.11
+deposit 2022-02-25 -11.2
+Withdrawal 2022-02-27 3212.98
+deposit 2022-03-01 -15.9
+deposit 2022-03-07 -232.21
+Loppusaldo 7975.330000000001

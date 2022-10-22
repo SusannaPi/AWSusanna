@@ -54,12 +54,13 @@ public class Checkpoint1 {
         acc.transaction(-15.90,LocalDate.of(2022, 3, 1));
         acc.transaction(-232.21,LocalDate.of(2022, 3, 7));
         // Haetaan helmikuun tapahtumat
-        //List<Transaction> transactions=acc.getTransactionsOf(2022,2);
+        List<Transaction> transactions=acc.getTransactionsOf(2022,2);
         // Jos ylläoleva tuntuu mahdottomalta, niin tyydyttävästi kelpaa myös
         acc.getAll();
-        //System.out.println("Helmikuun 2022 tapahtumat");
-        //for(Transaction t:transactions){
-        //   System.out.println(t.getDate().toString()+", "+t.getAmount());
+        System.out.println("Helmikuun 2022 tapahtumat");
+        for(Transaction t:transactions){
+           System.out.println(t.getDate().toString()+", "+t.getAmount());
+        }
            // Yllä oleva riittää. Lisäpistemahdollisuus jos tuloste tulee fiksusti toteutettuna
            // Muodossa "Otto 20.2.2022, -14.11"
            // Kutsumalla System.out.println(t.getDescription());
@@ -68,32 +69,43 @@ public class Checkpoint1 {
         // Tiedoston alkuun tilinomistaja sekä alkusaldo
         // Lisäpisteitä loppusaldon esittämisestä
         // Tilitapahtumat omille riveilleen halutulla tapaa muotoiltuna
-        //acc.export("tapahtumat.txt");
+        acc.export("tapahtumat.txt");
     
     }
     
     /*
     Laajenna koodia siten, että saat alla olevat kaksi metodia toimimaan
     */
-    /*
+    
     static void weSellStuff(Merchandise merch){
         System.out.println("Nyt myydään "+merch.getName()+" hintaan "+merch.getPrice());
     }
-    */
+    
     static void shopTester(){
-        /*
+        
         Television tv=new Television("LG televisio",2000);
         Microwave mw=new Microwave("Philips mikroaaltouuni",400);
         weSellStuff(tv);
         weSellStuff(mw);
-        */
+        
     }
+    
+    
+    
     static boolean isWorkingHours(LocalDateTime dt){
         // Palauta onko annettu päiväys työaikaa (Ma-Pe, 9:00-17:00)
+        //Haetaan viikonpäivä
+        String day = dt.getDayOfWeek().toString();
+        System.out.println(day);
+        //Haetaan kellonaika tunti
+        int time = dt.getHour();
         
-        
-        
-        return false;
+        if (day.equals("SATURDAY") || day.equals("SUNDAY")) {
+            return false;
+        } else if (time > 17 || time < 9) {
+            return false;
+        }
+        return true;
     }
     
     static LocalDate firstMondayOfNextMonth(){
@@ -130,4 +142,8 @@ public class Checkpoint1 {
         System.out.println("Tätä ei enää tarvitse kopioida_________");
         System.out.println("Mutta kopioi toiseen canvaksen vastauskenttään tuottamasi tapahtumat.txt:n sisältö");
     }
+
+    
+
+    
 }
