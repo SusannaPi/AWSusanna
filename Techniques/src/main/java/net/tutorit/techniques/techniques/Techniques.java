@@ -34,9 +34,9 @@ public class Techniques {
         finances(a -> System.out.println("Pimeää työtä " + a), 8000);
         //System.out.println("");
         
-        //CollectionsTest.weekdays();
-        //CollectionsTest.mapTests();
-        //CollectionsTest.personArrayTest();
+        CollectionsTest.weekdays();
+        CollectionsTest.mapTests();
+        CollectionsTest.personArrayTest();
         
         //FileTests.createFiles();
         
