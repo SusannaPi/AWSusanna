@@ -5,7 +5,9 @@
 package net.tutorit.checkpoint1uusinta;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,8 +26,7 @@ public class PurchaseOrder {
         this.orderDate = LocalDate.now();
         this.deliveryDate = orderDate.plusWeeks(3);
         this.items = new ArrayList<>();
-        
-           
+              
     }
     
     
@@ -36,11 +37,39 @@ public class PurchaseOrder {
     
     public void print() {
         System.out.println(this.customer);
-        System.out.println(this.orderDate);
-        System.out.println(this.deliveryDate);
+        
+        int date1 = orderDate.getDayOfMonth();
+        int month1 = orderDate.getMonthValue();
+        int year1 = orderDate.getYear();
+        System.out.println(date1 + "." + month1 + "." + year1);
+        int date2 = deliveryDate.getDayOfMonth();
+        int month2 = deliveryDate.getMonthValue();
+        int year2 = deliveryDate.getYear();
+        System.out.println(date2 + "." + month2 + "." + year2);
         items.stream().forEach(i -> System.out.println(i));
-        
-        
+           
     }
     
+    public double totalPrice() {
+        double totalPrice = 0;
+        for(Item i: items) {
+            totalPrice += i.getPrice();
+        }
+        
+        return totalPrice;
+    }
+    
+    public boolean isUrgent() {
+        if(totalPrice() > 50) {
+            return true;
+        }
+        return false;
+    }
+    
+          
+    
+    
+    
 }
+
+

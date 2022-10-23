@@ -34,11 +34,11 @@ public class Checkpoint1Uusinta {
         // Toimituspvm: toimituspvm suomalaisittain muotoiltuna
         // Kaikki tilausrivit: 
         //  tuotteen nimi, yksikköhinta, kappalemäärä ja kokonaishinta(=kpl*yksikköhinta)
-        //System.out.println("Tuote on kiireellinen, jos tilauksen kokonaishinta > 50"+po.isUrgent());
+        System.out.println("Tuote on kiireellinen, jos tilauksen kokonaishinta > 50 "+po.isUrgent());
         // Tässä siis laskettava yhteen kaikkien rivien kokonaishinnat
         // isUrgent palauttaa vain true/false -tiedon
         po.addItem("Liima",1,50.3);
-        //System.out.println("Tuote on kiireellinen, jos tilauksen kokonaishinta > 50"+po.isUrgent());
+        System.out.println("Tuote on kiireellinen, jos tilauksen kokonaishinta > 50 "+po.isUrgent());
         
     }
     
