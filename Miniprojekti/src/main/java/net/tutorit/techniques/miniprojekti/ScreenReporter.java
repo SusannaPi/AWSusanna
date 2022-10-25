@@ -46,8 +46,6 @@ public class ScreenReporter{
     
     
     public void printData(String name) {
-        
-      //ColumnDef cd = titleAndWidth.get(this.counter);
         System.out.printf("%-" + titleAndWidth.get(this.counter).getWidth() + "s", name);
         this.counter++;
         
