@@ -11,16 +11,20 @@ import java.util.ArrayList;
  * @author Susanna
  */
 public class PersonReport extends ReportBase<Person> {
+    //Pyytää reporteria lisäämään sarakkeille otsikot ja leveystiedon
+    //Pyytää reporteria tulostamaan tiedot henkilöstä (nimi ja ikä)
     
     public PersonReport(Reporter rep){
         super(rep);
     }
     
+    @Override
     protected void addColumns(Reporter reporter){
         reporter.addColumn("Name",20);
         reporter.addColumn("Age",5);
     }
     
+    @Override
     protected void printData(Reporter reporter, Person p){
         reporter.printData(p.getName());
         reporter.printData(p.getAge());

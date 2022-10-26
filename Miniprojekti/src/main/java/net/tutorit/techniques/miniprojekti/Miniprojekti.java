@@ -52,7 +52,11 @@ public class Miniprojekti {
         CompanyReport cr=new CompanyReport(repFile);
         cr.addData(new Company("Coders Unlimited","555-234234","info@coders.net"));
         cr.addData(new Company("Testers united","555-123123","info@testers.com"));
-        cr.doReport();  
+        cr.doReport();
+        
+        
+        
+        
         
     }
 }

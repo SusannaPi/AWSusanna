@@ -18,6 +18,7 @@ package net.tutorit.techniques.miniprojekti;
 */
 
 public interface Reporter {
+    //Metodit, jotka ReporterBasen tulee toteuttaa
     
     void beginReport();
     

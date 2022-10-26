@@ -8,8 +8,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Susanna
- */
+ * @author Susanna                          
+ * @param <T>                               
+ */                                  
+                                            // Abstrakti luokka ei toteuta eli implementoi kaikkia metodeitaan
+                                            // Abstraktista luokasta ei voi luoda ilmentymää, mutta aliluokkia sillä voi olla
 abstract public class ReportBase<T> {   
     private Reporter reporter;
     private ArrayList<T> information = new ArrayList<>();
@@ -22,7 +25,9 @@ abstract public class ReportBase<T> {
     }
 
     
-    abstract protected void addColumns(Reporter reporter);  
+    abstract protected void addColumns(Reporter reporter);  //Vain abstraktilla luokalla voi olla abstrakteja metodeja.
+                                                           //Abstraktin metodin lohko on pelkkä puolipiste 
+                                                            //ja siltä puuttuu algoritmi kokonaan
     
     public void addData(T d) {
         information.add(d);

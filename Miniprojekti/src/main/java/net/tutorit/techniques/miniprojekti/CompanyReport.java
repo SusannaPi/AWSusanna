@@ -11,17 +11,22 @@ import java.util.ArrayList;
  * @author Susanna
  */
 public class CompanyReport extends ReportBase<Company>{
+    //Pyytää reporteria lisäämään sarakkeille otsikot ja leveystiedon
+    //Pyytää reporteria tulostamaan tiedot (nimi, puhelinnumero ja email) yhtiöstä 
+    
     
     public CompanyReport(Reporter rep){
         super(rep);
     }
     
+    @Override
     protected void addColumns(Reporter reporter) {
         reporter.addColumn("Company", 20);
         reporter.addColumn("Phone", 15);
         reporter.addColumn("Contact email", 20);
     }
     
+    @Override
     protected void printData(Reporter reporter, Company c) {
         reporter.printData(c.getName());
         reporter.printData(c.getPhone());
