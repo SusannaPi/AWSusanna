@@ -12,7 +12,7 @@ package net.tutorit.techniques.miniprojekti;
 public class Miniprojekti {
 
     public static void main(String[] args) {
-        ScreenReporter rep=new ScreenReporter();
+        /*ScreenReporter rep=new ScreenReporter();
         rep.addColumn("Name",20);
         rep.addColumn("Age",5);
         rep.printColumns();
@@ -20,22 +20,39 @@ public class Miniprojekti {
         rep.printData(82);
         rep.printData("Ronald Reagan");
         rep.printData(93);
-        System.out.println("");
+        System.out.println("");*/
         
+        /*
         PersonReport pr=new PersonReport();
         pr.addData(new Person("John Wayne",82));
         pr.addData(new Person("Ronald Reagan",92));
         pr.doReport();
         System.out.println("");
+        */
         
-       
-       
-        
+        /*
         CompanyReport cr=new CompanyReport();
         cr.addData(new Company("Coders Unlimited","555-234234","info@coders.net"));
         cr.addData(new Company("Testers united","555-123123","info@testers.com"));
         cr.doReport();
+        System.out.println("");
+        */
+
         
+        
+        ScreenReporter repScreen=new ScreenReporter();
+        FileReporter repFile=new FileReporter("report.txt");
+        
+        PersonReport pr=new PersonReport(repScreen);
+        pr.addData(new Person("John Wayne",82));
+        pr.addData(new Person("Ronald Reagan",92));
+        pr.doReport();
+        
+        
+        CompanyReport cr=new CompanyReport(repFile);
+        cr.addData(new Company("Coders Unlimited","555-234234","info@coders.net"));
+        cr.addData(new Company("Testers united","555-123123","info@testers.com"));
+        cr.doReport();  
         
     }
 }
