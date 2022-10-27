@@ -9,6 +9,8 @@ import net.tutorit.techniques.techniques.interfaces.Worker;
 import net.tutorit.techniques.techniques.collections.CollectionsTest;
 import net.tutorit.techniques.techniques.files.FileTests;
 import net.tutorit.techniques.techniques.dates.DateTests;
+import net.tutorit.techniques.techniques.exceptions.ExceptionTests;
+
 
 /**
  *
@@ -16,27 +18,36 @@ import net.tutorit.techniques.techniques.dates.DateTests;
  */
 public class Techniques {
     
+    
+    
+    
+    
+    
+    
     /*class create finances(Worker w) method (meaning the class that contains
         the main method)
         • Calls w.pay (
         • And in the main
         • create Person and Company objects
         • Pass them to finances method*/
-        
+    /*    
     static void finances(Worker w, double salary) {
         w.pay(salary);
     }
-
+    */
+    
+    
+    
     public static void main(String[] args) {
         //System.out.println("Hello World!");
         //System.out.println("");
         
-        finances(a -> System.out.println("Pimeää työtä " + a), 8000);
+        //finances(a -> System.out.println("Pimeää työtä " + a), 8000);
         //System.out.println("");
         
-        CollectionsTest.weekdays();
-        CollectionsTest.mapTests();
-        CollectionsTest.personArrayTest();
+        //CollectionsTest.weekdays();
+        //CollectionsTest.mapTests();
+        //CollectionsTest.personArrayTest();
         
         //FileTests.createFiles();
         
@@ -44,6 +55,9 @@ public class Techniques {
         //DateTests.showCurrent();
         //DateTests.someCalculations();
         //DateTests.howManyDays();
+        
+        ExceptionTests.testExceptions();
+        
         
         
         

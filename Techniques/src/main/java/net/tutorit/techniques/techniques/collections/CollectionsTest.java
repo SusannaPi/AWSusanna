@@ -20,6 +20,10 @@ import net.tutorit.techniques.techniques.interfaces.Person;
  */
 public class CollectionsTest {
     
+    
+    
+    
+    
     static ArrayList<Person> persons1 = new ArrayList<>();
     
     static{
@@ -39,8 +43,8 @@ public class CollectionsTest {
     
     
     public static void personArrayTest() {
-            showPersons();
-            System.out.println(persons1);
+        showPersons();
+        System.out.println(persons1);
             /*System.out.println("... alphabetical order " );
             persons1.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
             System.out.println(persons1);
@@ -49,28 +53,63 @@ public class CollectionsTest {
             persons1.sort((person1, person2) -> person1.getAge()-(person2.getAge()));
             System.out.println(persons1);*/
             
-            System.out.println("");
+        System.out.println("");
             
-            persons1.stream()
-                    .sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
-                    .forEach(System.out::println);
+        persons1.stream()
+                .sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
+                .forEach(System.out::println);
             
-            System.out.println("");
+        System.out.println("");
             
             
-            persons1.stream().sorted((p1,p2) -> (p1.getAge()-p2.getAge()))
-                    .forEach(System.out::println);
+        persons1.stream().sorted((p1,p2) -> (p1.getAge()-p2.getAge()))
+                .forEach(System.out::println);
             
-            System.out.println("");
+        System.out.println("");
             
-            persons1.stream().filter(p -> p.getAge() > 18)
-                    .forEach(System.out::println);
-            System.out.println("");
+        persons1.stream().filter(p -> p.getAge() > 18)
+                .forEach(System.out::println);
+        System.out.println("");
             
-            persons1.stream().filter(p -> p.getAge() > 18)
-                    .sorted((p1,p2)-> p1.getName()
-                    .compareTo(p2.getName()))
-                    .forEach(System.out::println);
+        persons1.stream().filter(p -> p.getAge() > 18)
+                .sorted((p1,p2)-> p1.getName()
+                .compareTo(p2.getName()))
+                .forEach(System.out::println);
+            
+            
+        /*
+        Use map to create stream of strings (the names of Persons)
+        And only display those
+        */
+        /*
+        Find the oldest person-worker
+        Which stream-function to use???      
+        */
+        /*
+        Find the age of the oldest Person
+        Now use map and max
+        */
+        /*
+        You should have a Company-class
+        Add field ArrayList<Person>  employees (may be public)
+
+        Create couple Company-objects and place couple Persons on their employees-list
+        Place the Company-objects into an ArrayList
+        Study Stream’s flatMap-method
+        How do you print all the employees of both companies?
+        */
+        /*
+        Study IntStream
+        Generate 1000 random integers (1-100) into a List of integers
+        And from that stream create a HashMap as we did earlier
+        Value (1-100) is the key to the data
+        The actual data behind the key is counter, how many times that value is generated
+        */    
+            
+            
+            
+            
+            
     }
     
     public static void weekdays() {
