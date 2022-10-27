@@ -17,18 +17,18 @@ public class CPHarjoitus2 {
         johon pyrit viemään mahdollisimman paljon toiminnallisuutta periytetyistä luokista
         */
         
-        /*
+        
         SumList sl=new SumList();
         sl.add(new Sum(2,3));
         sl.add(new Sum(3,4));
         sl.print();
+        
         MultList ml=new MultList();
         ml.add(new Mult(5,6));
         ml.add(new Mult(6,7));
         ml.print();
-        */
+        
     }
-    
     
     
     static void abstracts(){
@@ -46,15 +46,13 @@ public class CPHarjoitus2 {
     }
     
     
-    
-    
-    
     static void testInterfaces(Named n){
         System.out.println("Nimetty "+n.getName());
         // Step 2, laajenna rajapintaa siten että seuraavatkin toimivat
         // Nyt et saa koskea Person luokkaa, pelkästään rajapintaan ja Product-luokkaan
         System.out.println("Extra:"+n.getExtra()); // Henkilöltä "Extra", tuotteelta "Salt"
     }
+    
     
     static void interfaces(){
         
@@ -65,7 +63,6 @@ public class CPHarjoitus2 {
         testInterfaces(pr);
         
         
-    
         // Välitä testInterfaces-metodille lambda, joka tuottaa tulosteen "Nimetty Lambda"
         
         testInterfaces(() -> "Lambda");
@@ -85,7 +82,6 @@ public class CPHarjoitus2 {
         testInterfaces(() -> "Nimetty anonyymi");
         */
     }
-    
     
     
     /*Implement classess Some and Other*/

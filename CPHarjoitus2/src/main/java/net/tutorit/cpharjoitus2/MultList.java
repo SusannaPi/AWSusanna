@@ -4,20 +4,35 @@
  */
 package net.tutorit.cpharjoitus2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author jyrki
  */
-public class MultList {
-    private ArrayList<Mult> calculations=new ArrayList<>();
+public class MultList extends CalcList<Mult>{
+    //private ArrayList<Mult> calculations=new ArrayList<>();
     
+    /*
     public void add(Mult m){
         calculations.add(m);
     }
+    */
+    
+    
     
     public void print(){
-        for(Mult m:calculations){
+        for(Mult m : calculations){
             System.out.println("Tulo "+m.result());
         }
     }
+    
+    
+    
+    /*
+    public String getResult(Mult calc) {
+        return "Tulo " +calc.result();
+    }
+    */
+
 }
