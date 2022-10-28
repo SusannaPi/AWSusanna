@@ -13,14 +13,20 @@ import java.util.ArrayList;
 public class NewspaperList extends BaseClass<Newspaper>{
     //private ArrayList<Newspaper> listing=new ArrayList<>();
     
+    
+    /*
     public void add(Newspaper p){
         listing.add(p);
     }
+    */
     
+    /*
     public void listThem(){
         System.out.println("Newspapers");
         for(Newspaper p:listing){
             System.out.println(p.getDescription());
         }
     }
+    */
+    
 }

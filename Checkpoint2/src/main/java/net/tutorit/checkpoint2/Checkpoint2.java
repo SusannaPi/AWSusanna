@@ -122,7 +122,7 @@ public class Checkpoint2 {
         System.out.println("");
         abstracts();
         System.out.println("");
-        //generics();
+        generics();
         System.out.println("Tähän loppuvat tulosteet__________________");
         System.out.println("Muista lopettaa testi Canvaksessa sekä palauttaa tämä tehtävä GitHub:iin");
     }

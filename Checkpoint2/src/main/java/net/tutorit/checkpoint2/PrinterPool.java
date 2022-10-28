@@ -13,14 +13,18 @@ import java.util.ArrayList;
 public class PrinterPool extends BaseClass<Printer>{
     //private ArrayList<Printer> printers=new ArrayList<>();
     
+    /*
     public void add(Printer p){
         printers.add(p);
     }
+    */
     
+    /*
     public void showPool(){
         System.out.println("Printers");
         for(Printer p: printers){
             System.out.println(p);
         }
     }
+    */
 }
