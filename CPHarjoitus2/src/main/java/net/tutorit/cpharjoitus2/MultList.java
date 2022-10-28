@@ -20,13 +20,11 @@ public class MultList extends CalcList<Mult>{
     */
     
     
-    
     public void print(){
         for(Mult m : calculations){
             System.out.println("Tulo "+m.result());
         }
     }
-    
     
     
     /*

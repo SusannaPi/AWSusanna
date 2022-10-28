@@ -24,6 +24,7 @@ abstract public class CalcList<T> {
     abstract public String getResult(T calc);
     */
     
+    
     /*
     public void print() {
         for (T t : calculations) {
