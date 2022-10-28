@@ -9,7 +9,7 @@ package net.tutorit.checkpoint2;
  * @author Susanna
  */
 public class Book {
-    private String book;
+    private String book = "Kettu";
     
     public Book(String book) {
         this.book = book;
