@@ -15,6 +15,7 @@ public class Checkpoint2 {
         Implement a common baseclass to NewspaperList and PrinterPool.
         Move as much of the common functionality to base class as possible
     */
+    
     static void generics(){
         NewspaperList npl=new NewspaperList();
         npl.add(new Newspaper("New York Times",1.23));
@@ -121,7 +122,7 @@ public class Checkpoint2 {
         System.out.println("");
         abstracts();
         System.out.println("");
-        generics();
+        //generics();
         System.out.println("Tähän loppuvat tulosteet__________________");
         System.out.println("Muista lopettaa testi Canvaksessa sekä palauttaa tämä tehtävä GitHub:iin");
     }

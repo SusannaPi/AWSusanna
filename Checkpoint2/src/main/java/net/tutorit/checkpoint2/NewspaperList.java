@@ -10,8 +10,8 @@ import java.util.ArrayList;
  *
  * @author jyrki
  */
-public class NewspaperList {
-    private ArrayList<Newspaper> listing=new ArrayList<>();
+public class NewspaperList extends BaseClass<Newspaper>{
+    //private ArrayList<Newspaper> listing=new ArrayList<>();
     
     public void add(Newspaper p){
         listing.add(p);

@@ -10,8 +10,8 @@ import java.util.ArrayList;
  *
  * @author jyrki
  */
-public class PrinterPool {
-    private ArrayList<Printer> printers=new ArrayList<>();
+public class PrinterPool extends BaseClass<Printer>{
+    //private ArrayList<Printer> printers=new ArrayList<>();
     
     public void add(Printer p){
         printers.add(p);
