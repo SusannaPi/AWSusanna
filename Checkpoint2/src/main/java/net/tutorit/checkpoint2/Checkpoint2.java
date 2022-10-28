@@ -65,7 +65,7 @@ public class Checkpoint2 {
     /*
     Implement the two classes needed for following two functions to work as described
     */
-    /*
+    
     static void testInheritance(Book b){
         String t=b.getTitle();  // Hobbit or Encyclopedia Britannica
         System.out.println("Printing "+t);
@@ -73,23 +73,26 @@ public class Checkpoint2 {
         // Either: "In a hole in the ground there lived a hobbit"
         // Or: "Encyclopedia britannica has 32640 pages
     }
-    */
+    
     
     static void inheritance(){
-        /*
+        
         Book b=new Book("Hobbit");
         Encyclopedia e=new Encyclopedia(32640); 
         System.out.println(b);  // Hobbit
         System.out.println(e); // Huge book
         testInheritance(b);
         testInheritance(e);
-        */
+        
     }
+    
+    
     
     public static void main(String[] args) {
         System.out.println("Testataanpas taas");
         System.out.println("Kopioi tulosteet tästä eteenpäin vastaukseksi Canvakseen____________");
         inheritance();
+        System.out.println("");
         interfaces();
         abstracts();
         generics();
