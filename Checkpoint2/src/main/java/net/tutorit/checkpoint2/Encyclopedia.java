@@ -9,17 +9,31 @@ package net.tutorit.checkpoint2;
  * @author Susanna
  */
 class Encyclopedia extends Book{
+    private int pages = 0;
     
     Encyclopedia(int i) {
-        super("Huge book");
+        super("Encyclopedia Britannica");
+        this.pages = i;
     }
     
+    
+    /*
     @Override
     public String getTitle() {
         return "Encyclopedia Britannica";
     }
+    */
     
-    public static void print() {
+    //Ylikirjoittaa Book-luokan metodin toString()
+    @Override
+    public String toString() {
+        return "Huge book";
+    }
+    
+    //Ylikirjoittaa Book-luokan metodin print()
+    @Override
+    public void print() {
         System.out.println("Encyclopedia britannica has 32640 pages");
     }
+   
 }

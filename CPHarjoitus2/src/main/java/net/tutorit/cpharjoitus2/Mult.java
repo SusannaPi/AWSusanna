@@ -13,12 +13,14 @@ class Mult extends CalcBase{
         super(a, b, "*");
     }
     
+    //Määritellään abstraktin luokan metodin sisältö
     @Override
     public int result() {
         int tulo = a * b;
         return tulo;
     }
-
+    
+    //Ylikirjoitetaan perittävä luokan print()-metodi
     @Override
     public void print() {
         System.out.println(a + " * " + b + " = " + result());

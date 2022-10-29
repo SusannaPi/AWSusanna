@@ -17,12 +17,14 @@ public class Movie extends TVBase {
         super(name);
         this.duration = duration;
     }
+
+    @Override
+    public String getDuration() {
+        return ", " + duration + " minutes";
+    }
             
     
-    @Override
-    public void print() {
-        System.out.println(name + " " + duration);
-    }
+    
     
     
     

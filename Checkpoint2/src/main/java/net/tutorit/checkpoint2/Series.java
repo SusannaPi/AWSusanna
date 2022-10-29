@@ -16,12 +16,13 @@ class Series extends TVBase{
         super(name);
         this.episodes = episodes;
     }
-    
-    
+
     @Override
-    public void print() {
-        System.out.println(name + " " + episodes + " episodes");
+    public String getDuration() {
+       return ", " + episodes + " episodes";
     }
+    
+    
     
     
 }

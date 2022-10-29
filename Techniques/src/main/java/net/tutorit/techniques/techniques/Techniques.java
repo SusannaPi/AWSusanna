@@ -20,10 +20,6 @@ public class Techniques {
     
     
     
-    
-    
-    
-    
     /*class create finances(Worker w) method (meaning the class that contains
         the main method)
         • Calls w.pay (
@@ -47,7 +43,7 @@ public class Techniques {
         
         //CollectionsTest.weekdays();
         //CollectionsTest.mapTests();
-        //CollectionsTest.personArrayTest();
+        CollectionsTest.personArrayTest();
         
         //FileTests.createFiles();
         
@@ -56,7 +52,7 @@ public class Techniques {
         //DateTests.someCalculations();
         //DateTests.howManyDays();
         
-        ExceptionTests.testExceptions();
+        //ExceptionTests.testExceptions();
         
         
         

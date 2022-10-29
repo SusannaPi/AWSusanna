@@ -9,24 +9,28 @@ package net.tutorit.checkpoint2;
  * @author Susanna
  */
 public class Book {
-    private String book = "Kettu";
+    private String book = "";
+    
     
     public Book(String book) {
+        if (book == null) {return;}
         this.book = book;
     }
 
+    
     public String getTitle() {
         return book;
     }
 
    
+    //Ylikirjoittaa Object-luokan metodin toString()
     @Override
     public String toString() {
         return book;
     }
     
     
-    public static void print() {
+    public void print() {
         System.out.println("In a hole in the ground there lived a hobbit");
     }
     

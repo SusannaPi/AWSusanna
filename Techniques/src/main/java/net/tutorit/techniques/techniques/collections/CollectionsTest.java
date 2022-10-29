@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -20,10 +21,6 @@ import net.tutorit.techniques.techniques.interfaces.Person;
  */
 public class CollectionsTest {
     
-    
-    
-    
-    
     static ArrayList<Person> persons1 = new ArrayList<>();
     
     static{
@@ -33,6 +30,7 @@ public class CollectionsTest {
         persons1.add(new Person("Aimo", 77));
         persons1.add(new Person("Heikki", 12));
         
+    
         
     }
     public static void showPersons() {
@@ -43,48 +41,61 @@ public class CollectionsTest {
     
     
     public static void personArrayTest() {
-        showPersons();
+        //showPersons();
+        
+        //System.out.println(persons1);
+        /*System.out.println("... alphabetical order " );
+        persons1.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
         System.out.println(persons1);
-            /*System.out.println("... alphabetical order " );
-            persons1.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
-            System.out.println(persons1);
             
-            System.out.println("...sorted by age...");
-            persons1.sort((person1, person2) -> person1.getAge()-(person2.getAge()));
-            System.out.println(persons1);*/
+        System.out.println("...sorted by age...");
+        persons1.sort((person1, person2) -> person1.getAge()-(person2.getAge()));
+        System.out.println(persons1);*/
             
-        System.out.println("");
-            
+        //System.out.println("");
+        /*    
         persons1.stream()
-                .sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
-                .forEach(System.out::println);
+            .sorted((p1,p2)-> p1.getName().compareTo(p2.getName()))
+            .forEach(System.out::println);
             
         System.out.println("");
             
             
         persons1.stream().sorted((p1,p2) -> (p1.getAge()-p2.getAge()))
-                .forEach(System.out::println);
+            .forEach(System.out::println);
             
         System.out.println("");
             
         persons1.stream().filter(p -> p.getAge() > 18)
-                .forEach(System.out::println);
+            .forEach(System.out::println);
         System.out.println("");
             
         persons1.stream().filter(p -> p.getAge() > 18)
-                .sorted((p1,p2)-> p1.getName()
-                .compareTo(p2.getName()))
-                .forEach(System.out::println);
-            
-            
+            .sorted((p1,p2)-> p1.getName()
+            .compareTo(p2.getName()))
+            .forEach(System.out::println);
+        */  
+        
+        
         /*
         Use map to create stream of strings (the names of Persons)
         And only display those
         */
+        
+        persons1.stream().map(p -> p.getName())
+                .forEach(nimi -> System.out.println(nimi));
+        System.out.println("");
+        
+        
         /*
         Find the oldest person-worker
         Which stream-function to use???      
         */
+        
+        ArrayList <Integer> vanhin = new ArrayList<>();
+        persons1.stream().map(p -> p.getAge()).sorted().findFirst();
+        System.out.println();
+        
         /*
         Find the age of the oldest Person
         Now use map and max

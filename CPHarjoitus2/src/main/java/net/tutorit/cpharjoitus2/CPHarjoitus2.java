@@ -11,6 +11,8 @@ package net.tutorit.cpharjoitus2;
  */
 public class CPHarjoitus2 {
 
+    
+    //Tehtävä 4
     static void generics(){
         /*
         Toteuta MultList ja SumList -luokille yhteinen kantaluokka,
@@ -31,6 +33,7 @@ public class CPHarjoitus2 {
     }
     
     
+    //Tehtävä 3
     static void abstracts(){
       
         Sum s=new Sum(1,2);
@@ -42,15 +45,17 @@ public class CPHarjoitus2 {
         s.print(); // 1 + 2 = 3
         m.print(); // 2 * 3 = 6
      
-    
     }
     
+    
+    //Tehtävä 2
     
     static void testInterfaces(Named n){
         System.out.println("Nimetty "+n.getName());
         // Step 2, laajenna rajapintaa siten että seuraavatkin toimivat
         // Nyt et saa koskea Person luokkaa, pelkästään rajapintaan ja Product-luokkaan
-        System.out.println("Extra:"+n.getExtra()); // Henkilöltä "Extra", tuotteelta "Salt"
+        System.out.println("Extra: "+n.getExtra()); // Henkilöltä "Extra", tuotteelta "Salt"
+        System.out.println("");
     }
     
     
@@ -65,18 +70,35 @@ public class CPHarjoitus2 {
         
         // Välitä testInterfaces-metodille lambda, joka tuottaa tulosteen "Nimetty Lambda"
         
+        //Toteutetaan rajapinta implementoimalla metodi getName()
         testInterfaces(() -> "Lambda");
         
         
-        // Välitä testInterface-metodille anonyymiluokan ilmentymä, joka tuottaa tulosteen "Nimetty anonyymi"
-        //Anonyymiluokan ilmentymä = mukamas instansioidaan rajapinta
+        // Välitä testInterface-metodille anonyymiluokan ilmentymä, joka tuottaa tulosteen 
+        //"Nimetty anonyymi"
         
+        //Anonyymiluokan ilmentymä = mukamas instansioidaan rajapinta
+        // Tässä olisi halutessaan mahdollista toteuttaa myös default metodi ja korvata Extra
+        //Koodi alla. Extran sijaan tulostuu Testi.
         testInterfaces(new Named(){
             @Override
             public String getName() {
-                return "Nimetty anonyymi";
+                return "anonyymi";
             }
         });
+        
+        /*
+        testInterfaces(new Named(){
+            @Override
+            public String getName() {
+                return "anonyymi";
+            }
+            @Override
+            public String getExtra() {
+                return "Testi";
+            }
+        });
+        */
         
         /* Yllä oleva tarkoittaa samaa asiaa kuin
         testInterfaces(() -> "Nimetty anonyymi");
@@ -84,6 +106,8 @@ public class CPHarjoitus2 {
     }
     
     
+    
+    //Tehtävä 1
     /*Implement classess Some and Other*/
     
     static void testInheritance(Some s){
@@ -105,8 +129,11 @@ public class CPHarjoitus2 {
     public static void main(String[] args) {
         System.out.println("Harjoittelua");
         inheritance();
+        System.out.println("");
         interfaces();
+        System.out.println("");
         abstracts();
+        System.out.println("");
         generics();
     }
 }

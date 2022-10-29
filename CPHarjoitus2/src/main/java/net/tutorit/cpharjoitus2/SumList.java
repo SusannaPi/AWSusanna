@@ -11,8 +11,11 @@ import java.util.ArrayList;
  * @author jyrki
  */
 public class SumList extends CalcList<Sum>{
+    //Siirretty yhteiseen kantaluokkaan
     //private ArrayList<Sum> calculations=new ArrayList<>();
     
+    
+    //Siirretty yhteiseen kantaluokkaan
     /*
     public void add(Sum s){
         calculations.add(s);
@@ -20,18 +23,22 @@ public class SumList extends CalcList<Sum>{
     */
     
     
+    @Override
+    public String getResult(Sum calc) {
+        return "Summa " + calc.result();
+    }
+    
+    
+    //Myös tämä osuus on mahdollista siirtää yhteiseen kantaluokkaan. Silloin kantaluokkaan syntyy
+    //abstraktimetodi, joka tulee implementoida. Yllä abstraktin metodin toteutus.
+    /*
     public void print(){
         for(Sum s : calculations){
             System.out.println("Summa "+s.result());
         }
     }
-    
-    
-    /*
-    @Override
-    public String getResult(Sum calc) {
-        return "Summa " + calc.result();
-    }
     */
+    
+    
     
 }

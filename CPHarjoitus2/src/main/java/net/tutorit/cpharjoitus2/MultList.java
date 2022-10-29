@@ -11,8 +11,11 @@ import java.util.ArrayList;
  * @author jyrki
  */
 public class MultList extends CalcList<Mult>{
+    //Siirretty yhteiseen kantaluokkaan
     //private ArrayList<Mult> calculations=new ArrayList<>();
     
+    
+    //Siirretty yhteiseen kantaluokkaan
     /*
     public void add(Mult m){
         calculations.add(m);
@@ -20,17 +23,22 @@ public class MultList extends CalcList<Mult>{
     */
     
     
+    @Override
+    public String getResult(Mult calc) {
+        return "Tulo " +calc.result();
+    }
+    
+    
+    //Myös tämä osuus on mahdollista siirtää yhteiseen kantaluokkaan. Silloin kantaluokkaan syntyy
+    //abstraktimetodi, joka tulee implementoida. Yllä abstraktin metodin toteutus.
+    /*
     public void print(){
         for(Mult m : calculations){
             System.out.println("Tulo "+m.result());
         }
     }
-    
-    
-    /*
-    public String getResult(Mult calc) {
-        return "Tulo " +calc.result();
-    }
     */
+    
+    
 
 }

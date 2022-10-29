@@ -9,29 +9,14 @@ import java.util.ArrayList;
 /**
  *
  * @author Susanna
+ * @param <T>
  */
-abstract public class BaseClass<T> {
+public class BaseClass<T> {
     protected ArrayList<T> list = new ArrayList<>();
     
     public void add(T t) {
         list.add(t);
     }
     
-    public void showPool(){
-        System.out.println("Printers");
-        for(T t : list){
-            System.out.println(t);
-        }
-    }
-    
-    abstract String getDescription();
-    
-    
-    public void listThem(){
-        System.out.println("Newspapers");
-        for(T t : list){
-            System.out.println(t.getDescription());
-        }
-    }
-    
+       
 }

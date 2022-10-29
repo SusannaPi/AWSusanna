@@ -20,13 +20,13 @@ public class NewspaperList extends BaseClass<Newspaper>{
     }
     */
     
-    /*
+    
     public void listThem(){
         System.out.println("Newspapers");
-        for(Newspaper p:listing){
+        for(Newspaper p:list){
             System.out.println(p.getDescription());
         }
     }
-    */
+    
     
 }

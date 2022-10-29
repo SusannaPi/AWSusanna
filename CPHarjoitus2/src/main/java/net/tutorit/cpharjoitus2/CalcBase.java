@@ -8,10 +8,14 @@ package net.tutorit.cpharjoitus2;
  *
  * @author Susanna
  */
+//Abstrakti luokka
+
 public abstract class CalcBase {
+    //Attribuutit näkyvät periville luokille
     protected int a;
     protected int b;
     String operator;
+    
     
     public CalcBase(int a, int b, String operator) {
         this.a = a;
@@ -20,6 +24,8 @@ public abstract class CalcBase {
         
     }
     
+    
+    //Abstrakti-metodi, jonka sisällön perivä luokka määrittelee
     public abstract int result();
     
     

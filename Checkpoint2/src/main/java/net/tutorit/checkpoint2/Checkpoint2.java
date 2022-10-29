@@ -28,7 +28,6 @@ public class Checkpoint2 {
     }
     
     
-    
     static void abstracts(){
         
         Movie m=new Movie("Gone with the Wind",221); // Name and duration in minutes
@@ -61,12 +60,27 @@ public class Checkpoint2 {
         testInterfaces(j);
         testInterfaces(c);
         
-        // Make also the following work:
-        //testInterfaces((a,b) -> 10.4, "Default"); // Should print Price: 10.4, Name: Default
         
+        // Make also the following work:
+        testInterfaces(() -> 10.4); // Should print Price: 10.4, Name: Default
+        
+        /*
+        testInterfaces(new Priced(){
+            @Override
+            public String getName() {
+                return "Default";
+            }
+            
+            @Override
+            public double getPrice() {
+                return 10.4;
+            }
+        });
+        */
         
         // Also pass an instance of an anonymous class to testInterfaces
         // It should print out Price:54.32, Name: Anonymous
+        
         
         testInterfaces(new Priced(){
             @Override
@@ -74,15 +88,12 @@ public class Checkpoint2 {
                 return "Anonymous";
             }
             
-
             @Override
             public double getPrice() {
                 return 54.32;
             }
         });
-        
-        
-        
+                
     }
     
     
@@ -112,7 +123,6 @@ public class Checkpoint2 {
     }
     
     
-    
     public static void main(String[] args) {
         System.out.println("Testataanpas taas");
         System.out.println("Kopioi tulosteet tästä eteenpäin vastaukseksi Canvakseen____________");
@@ -120,9 +130,10 @@ public class Checkpoint2 {
         System.out.println("");
         interfaces();
         System.out.println("");
-        abstracts();
+        //abstracts();
         System.out.println("");
-        generics();
+        //generics();
+        System.out.println("");
         System.out.println("Tähän loppuvat tulosteet__________________");
         System.out.println("Muista lopettaa testi Canvaksessa sekä palauttaa tämä tehtävä GitHub:iin");
     }

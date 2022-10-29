@@ -13,12 +13,14 @@ class Sum extends CalcBase{
         super(a, b, "+");
     }
     
+    //Määritellään abstraktin luokan metodin sisältö
     @Override
     public int result() {
         int summa = a + b;
         return summa;
     }
 
+    //Ylikirjoitetaan perittävä luokan print()-metodi
     @Override
     public void print() {
         System.out.println(a + " + " + b + " = " + result());

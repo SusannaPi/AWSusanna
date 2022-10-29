@@ -17,6 +17,7 @@ public class Printer {
         pagesPerMinute=p;
     }
     
+    @Override
     public String toString(){
         return name+" prints "+pagesPerMinute+" pages per minute";
     }

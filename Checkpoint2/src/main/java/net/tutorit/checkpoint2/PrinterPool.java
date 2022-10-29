@@ -19,12 +19,12 @@ public class PrinterPool extends BaseClass<Printer>{
     }
     */
     
-    /*
+    
     public void showPool(){
         System.out.println("Printers");
-        for(Printer p: printers){
+        for(Printer p: list){
             System.out.println(p);
         }
     }
-    */
+    
 }

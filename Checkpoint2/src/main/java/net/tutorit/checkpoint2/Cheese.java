@@ -9,7 +9,7 @@ package net.tutorit.checkpoint2;
  * @author Susanna
  */
 public class Cheese implements Priced{
-    private String name = "le gruyere";
+    private String name = "";
     private double price = 0;
     
     

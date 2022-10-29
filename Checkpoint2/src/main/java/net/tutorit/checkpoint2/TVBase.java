@@ -8,15 +8,19 @@ package net.tutorit.checkpoint2;
  *
  * @author Susanna
  */
-public class TVBase {
+abstract class TVBase {
     protected String name = "Tunturi";
     
     public TVBase(String name) {
         this.name = name;
     }
     
+    
+    public abstract String getDuration();
+    
+    
     public void print() {
-        System.out.println(name);
+        System.out.println(name + getDuration());
     }
     
     

@@ -13,14 +13,22 @@ public class Other extends Some {
 
     
     public Other(String s) {
-        super(s);
+        super("Other");
     }
 
     
+    //Ylikirjoitetaan kantaluokan metodi print()
     @Override
     public void print() {
         System.out.println("Some stuff");
     }
     
-    
+    /* Jos tämä olisi ylikirjoitettu tulostuisi Other kutsuttaessa System.out.println(t), mutta koska
+    ei ole ylikirjoitettu tulostuu Some. Testaa. */
+    /*
+    @Override
+    public String toString() {
+        return "Other";
+    }
+    */
 }

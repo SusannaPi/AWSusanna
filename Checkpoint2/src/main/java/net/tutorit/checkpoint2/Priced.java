@@ -8,9 +8,13 @@ package net.tutorit.checkpoint2;
  *
  * @author Susanna
  */
+
+
 public interface Priced {
     
     double getPrice();
     
-    String getName();
+    default String getName() {
+        return "Default";
+    }
 }
