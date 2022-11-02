@@ -8,14 +8,16 @@ package net.tutorit.checkpoint2;
  *
  * @author Susanna
  */
+//Abstrakti kantaluokka
+
 abstract class TVBase {
-    protected String name = "Tunturi";
+    protected String name = "";
     
     public TVBase(String name) {
         this.name = name;
     }
     
-    
+    // Abstraktit metodit tulee implementoida
     public abstract String getDuration();
     
     

@@ -6,14 +6,17 @@ package net.tutorit.techniques.techniques.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 import net.tutorit.techniques.techniques.interfaces.Person;
+import net.tutorit.techniques.techniques.Techniques;
 
 /**
  *
@@ -89,12 +92,22 @@ public class CollectionsTest {
         
         /*
         Find the oldest person-worker
-        Which stream-function to use???      
+        Which stream-function to use???
+         */
+       
+        /*
+        persons1.sort((p1,p2)-> p1.getAge()
+            .compareTo(p2.getAge()))
+            .forEach(nimi -> System.out.println(nimi));
+        */    
+        
+        
+        
+        /*
+        System.out.println(persons1.stream().max(Comparator.comparing(Person::getAge)));
+        System.out.println();
         */
         
-        ArrayList <Integer> vanhin = new ArrayList<>();
-        persons1.stream().map(p -> p.getAge()).sorted().findFirst();
-        System.out.println();
         
         /*
         Find the age of the oldest Person
@@ -122,6 +135,9 @@ public class CollectionsTest {
             
             
     }
+    
+    
+    
     
     public static void weekdays() {
         HashSet<String> weekdays = new HashSet<>();
@@ -190,6 +206,7 @@ public class CollectionsTest {
     }   
     
     
+    
     public static void mapTests() {
         System.out.println("Testing maps");
         HashMap<String, Person> codes = new HashMap<>();
@@ -238,12 +255,6 @@ public class CollectionsTest {
         
     }
     
-    
-    
-        
-    
-    
-    
-    
+     
     
 }

@@ -11,8 +11,10 @@ import java.util.ArrayList;
  * @author jyrki
  */
 public class PrinterPool extends BaseClass<Printer>{
+    //Viety yhteiseen kantaluokkaan
     //private ArrayList<Printer> printers=new ArrayList<>();
     
+    //Viety yhteiseen kantaluokkaan
     /*
     public void add(Printer p){
         printers.add(p);
@@ -22,7 +24,7 @@ public class PrinterPool extends BaseClass<Printer>{
     
     public void showPool(){
         System.out.println("Printers");
-        for(Printer p: list){
+        for(Printer p : list){
             System.out.println(p);
         }
     }

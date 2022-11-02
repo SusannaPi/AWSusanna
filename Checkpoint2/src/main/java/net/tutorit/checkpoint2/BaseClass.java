@@ -11,6 +11,10 @@ import java.util.ArrayList;
  * @author Susanna
  * @param <T>
  */
+//Geneerinen kantaluokka: mahdollisuus kirjoittaa yleiskäyttöisiä funktioita ja luokkia  
+//erikoistetaan käyttötilanteisiinsa sopiviksi. Kantaluokkaan kootaan yhteistä toiminnallisuutta 
+//ja aliluokat erikoistavat kantaluokkansa toimintaa
+
 public class BaseClass<T> {
     protected ArrayList<T> list = new ArrayList<>();
     

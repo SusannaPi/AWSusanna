@@ -8,13 +8,17 @@ package net.tutorit.checkpoint2;
  *
  * @author Susanna
  */
-
+// Rajapintaluokka. Rajapintaluokan metodit tulee toteuttaa, paitsi 
+                    //jos niiden edessä on määre default!
 
 public interface Priced {
     
     double getPrice();
     
+    
+    //Tätä metodia ei ole pakko implementoida rajapinnan toteuttavissa luokissa
     default String getName() {
         return "Default";
     }
+    
 }

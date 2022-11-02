@@ -10,7 +10,8 @@ package net.tutorit.checkpoint2;
  * @author jyrki
  */
 public class Checkpoint2 {
-
+    
+    //Tehtävä 4
     /*
         Implement a common baseclass to NewspaperList and PrinterPool.
         Move as much of the common functionality to base class as possible
@@ -28,6 +29,8 @@ public class Checkpoint2 {
     }
     
     
+    
+    //Tehtävä 3
     static void abstracts(){
         
         Movie m=new Movie("Gone with the Wind",221); // Name and duration in minutes
@@ -42,6 +45,7 @@ public class Checkpoint2 {
 
     
     
+    // Tehtävä 2
     /*
     Implement Priced-interface and Cheese and Juice classes so
     that two methods below begin to work
@@ -61,6 +65,7 @@ public class Checkpoint2 {
         testInterfaces(c);
         
         
+        //Lamda
         // Make also the following work:
         testInterfaces(() -> 10.4); // Should print Price: 10.4, Name: Default
         
@@ -78,6 +83,10 @@ public class Checkpoint2 {
         });
         */
         
+        
+        //Anonyymiluokka: Luokasta tarvitaan vain yksi ilmentymä ja tätä ilmentymää käytetään ainoastaan 
+        //yhdessä kohtaa  ko. luokan koodi siihen kohtaan, jossa luokan ilmentymää käytetään
+
         // Also pass an instance of an anonymous class to testInterfaces
         // It should print out Price:54.32, Name: Anonymous
         
@@ -97,7 +106,7 @@ public class Checkpoint2 {
     }
     
     
-    
+    //Tehtävä 1
     /*
     Implement the two classes needed for following two functions to work as described
     */
@@ -130,9 +139,9 @@ public class Checkpoint2 {
         System.out.println("");
         interfaces();
         System.out.println("");
-        //abstracts();
+        abstracts();
         System.out.println("");
-        //generics();
+        generics();
         System.out.println("");
         System.out.println("Tähän loppuvat tulosteet__________________");
         System.out.println("Muista lopettaa testi Canvaksessa sekä palauttaa tämä tehtävä GitHub:iin");

@@ -9,7 +9,6 @@ package net.tutorit.checkpoint2;
  * @author Susanna
  */
 public class Movie extends TVBase {
-    //private String name = "Metsä";
     private int duration = 0;
     
     
@@ -18,6 +17,7 @@ public class Movie extends TVBase {
         this.duration = duration;
     }
 
+    
     @Override
     public String getDuration() {
         return ", " + duration + " minutes";

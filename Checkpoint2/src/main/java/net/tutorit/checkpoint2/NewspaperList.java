@@ -11,9 +11,10 @@ import java.util.ArrayList;
  * @author jyrki
  */
 public class NewspaperList extends BaseClass<Newspaper>{
+    //Viety yhteiseen kantaluokkaan
     //private ArrayList<Newspaper> listing=new ArrayList<>();
     
-    
+    //Viety yhteiseen kantaluokkaan
     /*
     public void add(Newspaper p){
         listing.add(p);
@@ -23,7 +24,7 @@ public class NewspaperList extends BaseClass<Newspaper>{
     
     public void listThem(){
         System.out.println("Newspapers");
-        for(Newspaper p:list){
+        for(Newspaper p : list){
             System.out.println(p.getDescription());
         }
     }

@@ -9,7 +9,7 @@ package net.tutorit.checkpoint2;
  * @author Susanna
  */
 class Juice implements Priced{
-    private String name = "kiivi";
+    private String name = "";
     private double price = 0;
     
     
@@ -42,10 +42,6 @@ class Juice implements Priced{
         if (price >= 0) {
             this.price = price;
         }
-    }
-    
-    
-    
-    
+    } 
     
 }

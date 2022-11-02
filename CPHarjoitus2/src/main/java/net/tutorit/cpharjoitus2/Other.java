@@ -23,6 +23,7 @@ public class Other extends Some {
         System.out.println("Some stuff");
     }
     
+    
     /* Jos tämä olisi ylikirjoitettu tulostuisi Other kutsuttaessa System.out.println(t), mutta koska
     ei ole ylikirjoitettu tulostuu Some. Testaa. */
     /*
